@@ -1,0 +1,124 @@
+/* Global Resets and Box Sizing */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Background Gradient */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  color: #333;
+  line-height: 1.6;/
+}
+
+/* Glassmorphism for Container */
+.container {
+  min-height: 70vh;
+  width: 100%;
+  max-width: 570px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 30px;
+  backdrop-filter: blur(30px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 2rem; 
+  margin-bottom: 30px;
+  text-align: center; 
+  color: #333;
+}
+
+/* Form Styling */
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-column-gap: 10px;
+  align-items: center;
+}
+
+.form-select, .form-submit {
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.form-select:focus, .form-submit:focus {
+  outline: none;
+  border-color: #a1c4fd;
+}
+
+.form-submit {
+  background-color: #a1c4fd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+.form-submit:hover {
+  background-color: #92b4f4;
+}
+
+/* Card and Error Styling */
+.cards {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+
+.card-item {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.card-info {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-activity {
+  font-size: 1.25rem;
+  margin-top: 15px;
+}
+
+.tag-error {
+  width: 100%;
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 620px) {
+  .container {
+    padding: 40px 20px;
+  }
+  .form {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
